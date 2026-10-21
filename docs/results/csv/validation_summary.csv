@@ -1,0 +1,7 @@
+check,points,max_abs_z,points_abs_z_gt_3
+E1 Eve vs QBER,11,2.9825230429942273,0
+E2 depolarizing vs QBER,11,1.3477779746165373,0
+E2 bit-phase flip vs QBER,11,1.431022010427363,0
+E3 sifted length vs n/2,9,1.124485721765634,0
+E7 Qiskit vs theory,4,1.0081705256935793,0
+E7 Qiskit vs NumPy (two-sample),4,0.690152801240621,0

@@ -1,0 +1,3 @@
+# Convenience entry point so `pip install -r requirements.txt` works from the repo root.
+# The real list lives in backend/requirements.txt (pip resolves this path relative to this file).
+-r backend/requirements.txt

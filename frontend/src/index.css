@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/* Design tokens. Light is the default; dark follows the OS unless data-theme="light".
+   Chart series follow the validated categorical order (blue, orange, aqua);
+   status colors are reserved for state and always ship with an icon + label. */
+:root {
+  color-scheme: light;
+  --page: #f9f9f7;
+  --surface: #fcfcfb;
+  --surface-2: #f0efec;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #6f6d68;
+  --line: #e1e0d9;
+  --axis: #c3c2b7;
+  --accent: #1c5cab;
+  --accent-soft: #cde2fb;
+  --button: #1c5cab;
+  --button-hover: #184f95;
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --series-3: #1baf7a;
+  --good: #0ca30c;
+  --good-ink: #006300;
+  --warning: #fab219;
+  --serious: #ec835a;
+  --critical: #d03b3b;
+  --critical-ink: #b42323;
+  --critical-soft: #fbe9e9;
+  --good-soft: #e5f5e5;
+  --warning-soft: #fdf3dc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --surface-2: #242423;
+    --ink: #f0efec;
+    --ink-2: #c3c2b7;
+    --muted: #9a9890;
+    --line: #2c2c2a;
+    --axis: #383835;
+    --accent: #6da7ec;
+    --accent-soft: #10284a;
+    --button: #256abf;
+    --button-hover: #2a78d6;
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --good-ink: #0ca30c;
+    --critical-ink: #e66767;
+    --critical-soft: #3a1717;
+    --good-soft: #142b14;
+    --warning-soft: #3a2e10;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d;
+  --surface: #1a1a19;
+  --surface-2: #242423;
+  --ink: #f0efec;
+  --ink-2: #c3c2b7;
+  --muted: #9a9890;
+  --line: #2c2c2a;
+  --axis: #383835;
+  --accent: #6da7ec;
+  --accent-soft: #10284a;
+  --button: #256abf;
+  --button-hover: #2a78d6;
+  --series-1: #3987e5;
+  --series-2: #d95926;
+  --series-3: #199e70;
+  --good-ink: #0ca30c;
+  --critical-ink: #e66767;
+  --critical-soft: #3a1717;
+  --good-soft: #142b14;
+  --warning-soft: #3a2e10;
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-button: var(--button);
+  --color-button-hover: var(--button-hover);
+  --color-good: var(--good);
+  --color-good-ink: var(--good-ink);
+  --color-good-soft: var(--good-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-serious: var(--serious);
+  --color-critical: var(--critical);
+  --color-critical-ink: var(--critical-ink);
+  --color-critical-soft: var(--critical-soft);
+  --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+input[type="range"] {
+  accent-color: var(--button);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}

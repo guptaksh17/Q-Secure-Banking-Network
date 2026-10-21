@@ -1,0 +1,8 @@
+{
+  "python.terminal.activateEnvironment": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.cwd": "${workspaceFolder}/backend",
+  "python.testing.pytestArgs": ["tests"],
+  "files.eol": "\n",
+  "[bat]": { "files.eol": "\r\n" }
+}
